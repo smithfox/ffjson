@@ -225,7 +225,7 @@ func (r *ffReader) SliceString(out *Buffer) error {
 			return io.EOF
 		}
 
-		j, c = scanString(r.s, j)
+		j, c = aScanString(r.s, j)
 
 		if c == '"' {
 			if j != r.i {

@@ -19,7 +19,7 @@
 
 package jsonrt
 
-func scanString(s []byte, j int) (int, byte) {
+func aScanString(s []byte, j int) (int, byte) {
 	for {
 		if j >= len(s) {
 			return j, 0

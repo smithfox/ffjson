@@ -2,8 +2,8 @@
 
 #define NOSPLIT 4
 
-// func scanStringSSE(s []byte, j int) (int, byte)
-TEXT scanStringSSE(SB),NOSPLIT,$0
+// func aScanStringSSE(s []byte, j int) (int, byte)
+TEXT aScanStringSSE(SB),NOSPLIT,$0
 	// TODO: http://www.strchr.com/strcmp_and_strlen_using_sse_4.2
 	// Equal any, operand1 set to 
 	RET
@@ -11,8 +11,8 @@ TEXT scanStringSSE(SB),NOSPLIT,$0
 // Copyright 2011 The Go Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
-// func haveSSE42() bool
-TEXT ·haveSSE42(SB),NOSPLIT,$0
+// func aHaveSSE42() bool
+TEXT ·aHaveSSE42(SB),NOSPLIT,$0
 	XORQ AX, AX
 	INCL AX
 	CPUID

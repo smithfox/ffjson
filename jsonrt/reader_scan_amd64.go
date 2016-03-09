@@ -20,19 +20,18 @@
 
 package jsonrt
 
-func haveSSE42() bool
-func scanStringSSE(s []byte, j int) (int, byte)
+func aHaveSSE42() bool
+func aScanStringSSE(s []byte, j int) (int, byte)
 
-var sse42 = haveSSE42()
+var sse42 = aHaveSSE42()
 
-func scanString(s []byte, j int) (int, byte) {
+func aScanString(s []byte, j int) (int, byte) {
 	// XXX The following fails to compile on Go 1.2.
-	/*
-		if false && sse42 {
-			return scanStringSSE(s, j)
-		}
-	*/
-
+/*
+    if false && sse42 {
+        return aScanStringSSE(s, j)
+    }
+*/
 	for {
 		if j >= len(s) {
 			return j, 0
